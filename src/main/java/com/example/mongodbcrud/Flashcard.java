@@ -7,12 +7,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
+import java.util.List;
+
 @Getter
 @Setter
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@Document( "entries")
+@Document( collection = "entries")
 @QueryEntity
 public class Flashcard {
 
@@ -26,4 +28,10 @@ public class Flashcard {
     private String userName;
 
     private String folder;
+
+    private List<String> polish;
+
+    private List<String> foreign;
+
+    private List<String> hashtags;
 }
