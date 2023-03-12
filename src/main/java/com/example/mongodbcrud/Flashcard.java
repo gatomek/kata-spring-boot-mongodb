@@ -27,11 +27,15 @@ public class Flashcard {
     @Field( "username")
     private String userName;
 
+    @Field( "folder")
     private String folder;
 
+    @Field( "polish")
     private List<String> polish;
 
+    @Field( "foreign")
     private List<String> foreign;
 
+    @Field( "hashtags")
     private List<String> hashtags;
 }
