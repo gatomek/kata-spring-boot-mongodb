@@ -13,10 +13,10 @@ public interface FlashcardRepository extends MongoRepository<Flashcard, String>,
     @Query("{uuid : '?0'}")
     Flashcard findItemByUuid(String uuid);
 
-    @Query(value="{username : '?0'}", fields="{'username' : 1, 'uuid': 1, 'folder': 1 }")
+    @Query(value="{username : '?0'}", fields="{'username' : 1, 'uuid': 1, 'folder': 1, 'polish' : 1, 'foreign' : 1, 'hashtags' : 1 }")
     List<Flashcard> findAll(String username);
 
-    @Query(value="{}", fields="{'username' : 1, 'uuid': 1, 'folder': 1 }")
+    @Query(value="{}")
     List<Flashcard> findAll();
 
     public long count();
