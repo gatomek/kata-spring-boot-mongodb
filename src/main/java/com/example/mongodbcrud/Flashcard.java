@@ -3,6 +3,7 @@ package com.example.mongodbcrud;
 import com.querydsl.core.annotations.QueryEntity;
 import lombok.*;
 
+import org.bson.types.Binary;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.MongoId;
@@ -38,4 +39,7 @@ public class Flashcard {
 
     @Field( "hashtags")
     private List<String> hashtags;
+
+    @Field( "image")
+    private Binary image;
 }
